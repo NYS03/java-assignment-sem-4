@@ -1,4 +1,4 @@
 
-public class posMainPage() {
+//public class posMainPage() {
 
-}
+
