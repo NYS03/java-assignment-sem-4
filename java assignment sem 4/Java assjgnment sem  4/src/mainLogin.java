@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import javax.swing.*;
 public class mainLogin {
     public static void main(String[] args){
         int count;
@@ -14,6 +14,9 @@ public class mainLogin {
             System.out.println("Enter the Password");
             String upass = sc.nextLine();
 
+
+
+
             count = 0;
             if (uname.equals(username.getRealname()) && upass.equals(password.getRealpass())) { //realname and realpass are from database to link
                 System.out.println("Welcome " + uname + " you have Logged-in Successfully");
@@ -24,5 +27,3 @@ public class mainLogin {
         } while (count == 1);
     }
 }
-
-//yes
