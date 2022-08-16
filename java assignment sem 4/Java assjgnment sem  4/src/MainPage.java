@@ -4,7 +4,9 @@ public class MainPage {
             login username = new login();
             login password = new login();
 
-            System.out.println("Welcome " + username.getRealname());
+            System.out.println("Welcome " + username.getRealname());am
+
+
         }
 
 }
