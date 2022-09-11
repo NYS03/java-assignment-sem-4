@@ -18,7 +18,7 @@ public class Items {
 
     }
     public Items(String cpu, double cpuPrice, String ram, double ramPrice, String hdd, double hddPrice, String psu, double psuPrice, String Case, double CasePrice, String gpu, double gpuPrice, String ssd, double ssdPrice) {
-            this.cpu = cpu;
+        this.cpu = cpu;
         this.cpuPrice = cpuPrice;
         this.ram = ram;
         this.ramPrice = ramPrice;
