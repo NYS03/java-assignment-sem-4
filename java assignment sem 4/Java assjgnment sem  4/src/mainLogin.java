@@ -17,7 +17,6 @@ public class mainLogin {
                 if (uname.isEmpty()) {
                     System.out.println("Username is empty");
                     count++;
-                    System.out.printf("%d", count);
                 } else if (!uname.isEmpty()) {
                     count = 0;
                 }
@@ -27,7 +26,6 @@ public class mainLogin {
                 upass = sc.nextLine();
                 if (upass.isEmpty()) {
                     count++;
-                    System.out.printf("%d", count);
                     System.out.println("Password is empty");
                 } else if (!upass.isEmpty()) {
                     count = 0;

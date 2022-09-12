@@ -3,7 +3,9 @@ public class Stock extends Items {
 
     public void Stock() {
 
-        Stock
+
+
+
         System.out.println("StockList Main Menu");
         System.out.println("*******************");
         System.out.println("1. Add an Item");
@@ -14,16 +16,5 @@ public class Stock extends Items {
         System.out.println("6. Exit");
         System.out.print("Select an option: ");
 
-    }
-
-    private <StockItem> void addItems(){
-        //adds item to end of stock list
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter the item name: ");
-        String name = input.nextLine();
-        System.out.print("Enter the item price: ");
-        double price = input.nextDouble();
-        System.out.print("Enter the item quantity: ");
-        int quantity = input.nextInt();
     }
 }
