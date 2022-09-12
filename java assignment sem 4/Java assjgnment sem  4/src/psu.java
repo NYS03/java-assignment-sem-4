@@ -1,13 +1,13 @@
 public class psu extends Items{
     private String psuName;
     private String psuType; //ATX, SFX, SFX-L
-    private String psuWattage;
+    private int psuWattage;
 
     public psu(){
 
     }
 
-    public psu(String itemID, double price, double brand, double quantity, double itemType, String psuName, String psuType, String psuWattage){
+    public psu(String itemID, double price, String brand, int quantity, String itemType, String psuName, String psuType, int psuWattage){
         super(itemID, price, brand, quantity, itemType);
         this.psuName = psuName;
         this.psuType = psuType;
@@ -30,11 +30,11 @@ public class psu extends Items{
         this.psuType = psuType;
     }
 
-    public String getPsuWattage(){
+    public int getPsuWattage(){
         return psuWattage;
     }
 
-    public void setPsuWattage(String psuWattage){
+    public void setPsuWattage(int psuWattage){
         this.psuWattage = psuWattage;
     }
 

@@ -6,7 +6,7 @@ public class casing extends Items{
 
     }
 
-    public casing(String itemID, double price, double brand, double quantity, double itemType, String casingName, String casingType){
+    public casing(String itemID, double price, String brand, int quantity, String itemType, String casingName, String casingType){
         super(itemID, price, brand, quantity, itemType);
         this.casingName = casingName;
         this.casingType = casingType;

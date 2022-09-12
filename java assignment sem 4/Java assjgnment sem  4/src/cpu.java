@@ -1,7 +1,7 @@
 public class cpu extends Items{
     private String cpuName;
-    private String totalCores;
-    private String totalThreads;
+    private int totalCores;
+    private int totalThreads;
     private String ClockSpeed;
 
 
@@ -9,7 +9,7 @@ public class cpu extends Items{
 
     }
 
-    public cpu(String itemID, double price, double brand, double quantity, double itemType, String cpuName, String totalCores, String totalThreads, String ClockSpeed){
+    public cpu(String itemID, double price, String brand, int quantity, String itemType, String cpuName, int totalCores, int totalThreads, String ClockSpeed){
         super(itemID, price, brand, quantity, itemType);
         this.cpuName = cpuName;
         this.totalCores = totalCores;
@@ -25,19 +25,19 @@ public class cpu extends Items{
         this.cpuName = cpuName;
     }
 
-    public String getTotalCores(){
+    public int getTotalCores(){
         return totalCores;
     }
 
-    public void setTotalCores(String totalCores){
+    public void setTotalCores(int totalCores){
         this.totalCores = totalCores;
     }
 
-    public String getTotalThreads(){
+    public int getTotalThreads(){
         return totalThreads;
     }
 
-    public void setTotalThreads(String totalThreads){
+    public void setTotalThreads(int totalThreads){
         this.totalThreads = totalThreads;
     }
 

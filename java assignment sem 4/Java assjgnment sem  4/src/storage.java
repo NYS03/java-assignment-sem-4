@@ -1,13 +1,13 @@
-public class Storage extends Items{
+public class storage extends Items{
     private String StorageName;
     private String StorageType; //SSD, HDD
     private String StorageSize;
 
-    public Storage(){
+    public storage(){
 
     }
 
-    public Storage(String itemID, double price, double brand, double quantity, double itemType, String StorageName, String StorageType, String StorageSize){
+    public storage(String itemID, double price, String brand, int quantity, String itemType, String StorageName, String StorageType, String StorageSize){
         super(itemID, price, brand, quantity, itemType);
         this.StorageName = StorageName;
         this.StorageType = StorageType;

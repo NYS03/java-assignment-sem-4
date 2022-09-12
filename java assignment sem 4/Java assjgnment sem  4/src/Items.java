@@ -1,15 +1,15 @@
 public class Items{
     private String itemID;
     private double price;
-    private double brand;
-    private double quantity;
-    private double itemType;
+    private String brand;
+    private int quantity;
+    private String itemType;
 
     public Items(){
 
     }
 
-    public Items(String itemID, double price, double brand, double quantity, double itemType){
+    public Items(String itemID, double price, String brand, int quantity, String itemType){
         this.itemID = itemID;
         this.price = price;
         this.brand = brand;
@@ -33,31 +33,31 @@ public class Items{
         this.price = price;
     }
 
-    public double getBrand(){
+    public String getBrand(){
         return brand;
     }
 
-    public void setBrand(double brand){
+    public void setBrand(String brand){
         this.brand = brand;
     }
 
-    public double getQuantity(){
+    public int getQuantity(){
         return quantity;
     }
 
-    public void setQuantity(double quantity){
+    public void setQuantity(int quantity){
         this.quantity = quantity;
     }
 
-    public double getItemType(){
+    public String getItemType(){
         return itemType;
     }
 
-    public void setItemType(double itemType){
+    public void setItemType(String itemType){
         this.itemType = itemType;
     }
 
     public String toString(){
-        return "Item ID: " + itemID + "\nPrice: " + price + "\nBrand: " + brand + "\nQuantity: " + quantity + "\nItem Type: " + itemType;
+        return "Item ID: " + itemID + "\nPrice: RM" + price + "\nBrand: " + brand + "\nQuantity: " + quantity + "\nItem Type: " + itemType;
     }
 }

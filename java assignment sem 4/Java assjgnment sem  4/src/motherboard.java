@@ -1,16 +1,16 @@
-public class motherBoard extends Items{
+public class motherboard extends Items{
     private String motherBoardName;
     private String motherBoardType; //lga or am
     private String motherBoardSize; //atx, e-atx etc
     private String motherBoardRamType; //ddr3, ddr4 etc
-    private String motherBoardRamSize; //4gb, 8gb etc
+    private int motherBoardRamSize; //4gb, 8gb etc
     private String motherBoardRamSpeed; //1600mhz, 2400mhz etc
 
-    public motherBoard(){
+    public motherboard(){
 
     }
 
-    public motherBoard(String itemID, double price, double brand, double quantity, double itemType, String motherBoardName, String motherBoardType, String motherBoardSize, String motherBoardRamType, String motherBoardRamSize, String motherBoardRamSpeed){
+    public motherboard(String itemID, double price, String brand, int quantity, String itemType, String motherBoardName, String motherBoardType, String motherBoardSize, String motherBoardRamType, int motherBoardRamSize, String motherBoardRamSpeed){
         super(itemID, price, brand, quantity, itemType);
         this.motherBoardName = motherBoardName;
         this.motherBoardType = motherBoardType;
@@ -52,11 +52,11 @@ public class motherBoard extends Items{
         this.motherBoardRamType = motherBoardRamType;
     }
 
-    public String getMotherBoardRamSize(){
+    public int getMotherBoardRamSize(){
         return motherBoardRamSize;
     }
 
-    public void setMotherBoardRamSize(String motherBoardRamSize){
+    public void setMotherBoardRamSize(int motherBoardRamSize){
         this.motherBoardRamSize = motherBoardRamSize;
     }
 
@@ -74,7 +74,7 @@ public class motherBoard extends Items{
                         "\nMotherboard Type: " + motherBoardType +
                         "\nMotherboard Size: " + motherBoardSize +
                         "\nMotherboard RAM Type: " + motherBoardRamType +
-                        "\nMotherboard RAM Size: " + motherBoardRamSize +
+                        "\nMotherboard RAM Size: " + motherBoardRamSize + "GB" +
                         "\nMotherboard RAM Speed: " + motherBoardRamSpeed;
     }
 
