@@ -31,6 +31,7 @@ public class casing extends Items{
     public String toString(){
         return super.toString() +
                         "\nCasing Name: " + casingName +
-                        "\nCasing Type: " + casingType;
+                        "\nCasing Type: " + casingType +
+                        "\n";
     }
 }

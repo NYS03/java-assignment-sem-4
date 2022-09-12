@@ -42,7 +42,8 @@ public class ram extends Items{
         return super.toString() +
                         "\nRAM Name: " + ramName +
                         "\nRAM Type: " + ramType +
-                        "\nRAM Speed: " + ramSpeed;
+                        "\nRAM Speed: " + ramSpeed +
+                        "\n";
     }
 
 }

@@ -54,7 +54,8 @@ public class cpu extends Items{
                         "\nCPU Name: " + cpuName +
                         "\nTotal Cores: " + totalCores +
                         "\nTotal Threads: " + totalThreads +
-                        "\nClock Speed: " + ClockSpeed;
+                        "\nClock Speed: " + ClockSpeed +
+                        "\n";
     }
 
 

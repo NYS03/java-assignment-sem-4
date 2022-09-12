@@ -42,7 +42,8 @@ public class psu extends Items{
         return super.toString() +
                         "\nPSU Name: " + psuName +
                         "\nPSU Type: " + psuType +
-                        "\nPSU Wattage: " + psuWattage;
+                        "\nPSU Wattage: " + psuWattage +
+                        "W\n";
     }
 
 

@@ -42,7 +42,8 @@ public class storage extends Items{
         return super.toString() +
                         "\nStorage Name: " + StorageName +
                         "\nStorage Type: " + StorageType +
-                        "\nStorage Size: " + StorageSize;
+                        "\nStorage Size: " + StorageSize +
+                        "\n";
     }
 
 

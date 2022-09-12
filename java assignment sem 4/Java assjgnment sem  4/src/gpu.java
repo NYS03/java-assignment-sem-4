@@ -54,7 +54,8 @@ public class gpu extends Items{
                         "\nGPU Name: " + gpuName +
                         "\nGPU Type: " + gpuType +
                         "\nGPU BidWidth: " + gpuBidwidth + "bit" +
-                        "\nGPU Memory: " + gpuMemory;
+                        "\nGPU Memory: " + gpuMemory +
+                        "\n";
     }
 
 
