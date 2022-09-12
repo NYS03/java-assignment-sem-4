@@ -33,6 +33,8 @@ public class newOrder extends Items{
                         } else {
                             i.setQuantity(i.getQuantity() - quantity);
                             System.out.println("Item added to cart");
+                            //add item to cart using cart class
+                            cart.add(i, quantity);
                         }
                     }
                 }
@@ -145,10 +147,11 @@ public class newOrder extends Items{
                         } else {
                             i.setQuantity(i.getQuantity() - quantity);
                             System.out.println("Item added to cart");
+
                         }
                     }
                 }
-                
+
                 break;
             case 7:
                 System.out.println("Thank you for shopping with us!");

@@ -9,7 +9,8 @@ public class main {
             Scanner sc = new Scanner(System.in);
             System.out.println("1. New Order");
             System.out.println("2. Inventory");
-            System.out.println("3. Exit");
+            System.out.println("3. Check Cart");
+            System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
             switch (choice) {
@@ -20,6 +21,9 @@ public class main {
                     Stock.Stock();
                     break;
                 case 3:
+                    cart.checkCart();
+                    break;
+                case 4:
                     System.out.println("Thank you for shopping with us!");
                     break;
                 default:

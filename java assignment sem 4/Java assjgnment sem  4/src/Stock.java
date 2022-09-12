@@ -112,18 +112,55 @@ public class Stock extends Items {
     }
 
     public static void addItem(){
+        //ask user which category to add
+        //ask user to enter item details
+        //create new object for the item and add to the array
+        //scanner sc
+        Scanner sc = new Scanner(System.in);
+        int x = 0;
+        do {
+            System.out.println("1. CPU");
+            System.out.println("2. RAM");
+            System.out.println("3. GPU");
+            System.out.println("4. Casing");
+            System.out.println("5. PSU");
+            System.out.println("6. Storage");
+            System.out.println("7. Motherboard");
+            System.out.println("8. Exit");
+            System.out.print("Enter your choice: ");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    //get itemID for cpu
+                    int itemID = globalInventory.cpu.size() + 1;
 
+
+
+
+
+                    System.out.print("Enter item name: ");
+                    String name = sc.next();
+                    System.out.print("Enter item price: ");
+                    double price = sc.nextDouble();
+                    System.out.print("Enter item quantity: ");
+                    int quantity = sc.nextInt();
+                    System.out.print("Enter item brand: ");
+                    String brand = sc.next();
+                    System.out.print("Enter item core: ");
+                    int core = sc.nextInt();
+                    System.out.print("Enter item thread: ");
+                    int thread = sc.nextInt();
+                    System.out.print("Enter item frequency: ");
+                    String frequency = sc.nextLine();
+                    //add all the details into the array
+                case 8:
+                    x = 1;
+                    break;
+
+
+            }
+        }while(x == 0);
     }
 
-    public static void deleteItem(){
 
-    }
-
-    public static void updateItemPrice(){
-
-    }
-
-    public static void updateItemQuantity(){
-
-    }
 }
