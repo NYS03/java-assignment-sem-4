@@ -20,15 +20,6 @@ public class Stock extends Items {
                 case 1:
                     addItem();
                     break;
-                case 2:
-                    deleteItem();
-                    break;
-                case 3:
-                    updateItemPrice();
-                    break;
-                case 4:
-                    updateItemQuantity();
-                    break;
                 case 5:
                     printStockList();
                     break;
@@ -112,6 +103,7 @@ public class Stock extends Items {
     }
 
     public static void addItem(){
+        Scanner input = new Scanner(System.in);
         //ask user which category to add
         //ask user to enter item details
         //create new object for the item and add to the array
@@ -131,18 +123,13 @@ public class Stock extends Items {
             int choice = sc.nextInt();
             switch (choice) {
                 case 1:
-                    //get itemID for cpu
-                    int itemID = globalInventory.cpu.size() + 1;
-
-
-
-
-
                     System.out.print("Enter item name: ");
                     String name = sc.next();
                     System.out.print("Enter item price: ");
+                    input.nextLine();
                     double price = sc.nextDouble();
                     System.out.print("Enter item quantity: ");
+                    input.nextLine();
                     int quantity = sc.nextInt();
                     System.out.print("Enter item brand: ");
                     String brand = sc.next();
@@ -151,8 +138,35 @@ public class Stock extends Items {
                     System.out.print("Enter item thread: ");
                     int thread = sc.nextInt();
                     System.out.print("Enter item frequency: ");
+                    input.nextLine();
                     String frequency = sc.nextLine();
                     //add all the details into the array
+                    String itemID = null;
+                    String itemType = null;
+                    for (int i = 0; i < globalInventory.cpu.length; i++) {
+                        //get itemID from array
+                        itemID = globalInventory.cpu[i].getItemID();
+                        //split string into integer and character
+                        String[] parts = itemID.split("(?<=\\D)(?=\\d)");
+                        //get the integer part
+                        int num = Integer.parseInt(parts[1]);
+                        //store the integer part in a variable
+                        int num2 = num;
+                        //compare next array value to the variable if it is larger
+                        //store the larger value in the variable
+                        if (globalInventory.cpu[i].getItemID().compareTo(itemID) > 0) {
+                            num2 = Integer.parseInt(parts[1]);
+
+                        }
+                        //add 1 to the largest variable
+                        num2++;
+                        //concatenate the C with the new integer
+                        String newID = "C" + num2;
+                        itemType = "cpu";
+                    }
+                    //store everything into the globalInventory array
+                    globalInventory.cpu[globalInventory.cpu.length] = new cpu(itemID, price, brand, quantity, itemType, name, core, thread, frequency);
+
                 case 8:
                     x = 1;
                     break;
@@ -161,6 +175,8 @@ public class Stock extends Items {
             }
         }while(x == 0);
     }
+
+
 
 
 }

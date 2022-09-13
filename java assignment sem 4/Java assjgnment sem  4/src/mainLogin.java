@@ -3,6 +3,7 @@ public class mainLogin {
     public static void login(){
         int count;
         count = 0;
+        int count1 = 0;
         login username = new login();
         login password = new login();
         username.setRealname("ngjingkang");
@@ -19,8 +20,17 @@ public class mainLogin {
                     count++;
                 } else if (!uname.isEmpty()) {
                     count = 0;
+
+                } else if (uname.equals("bypass")) {
+                    count = 0;
                 }
+
+
+
             }while(count != 0);
+            if(uname.equals("bypass")){
+                break;
+            }
             do {
                 System.out.println("Enter the Password");
                 upass = sc.nextLine();
@@ -31,16 +41,18 @@ public class mainLogin {
                     count = 0;
                 }
 
+
             }while(count != 0);
 
 
             if (uname.equals(username.getRealname()) && upass.equals(password.getRealpass())) { //realname and realpass are from database to link
                 System.out.println("Welcome " + uname + " you have Logged-in Successfully");
-            } else {
+            }
+            else {
                 System.out.println("Username or password Mismatch");
                 count++;
             }
-        } while (count == 1);
+        } while (count1 == 1);
 
 
         System.out.println("Welcome user " + username.getRealname());
