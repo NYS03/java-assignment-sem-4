@@ -5,6 +5,14 @@ public class main {
 
     public static void main(String[] args) {
         mainLogin.login();
+        mainScreen();
+
+
+
+
+    }
+
+    public static void mainScreen(){
         do{
             Scanner sc = new Scanner(System.in);
             System.out.println("1. New Order");
@@ -32,11 +40,6 @@ public class main {
             }
 
         }while(true);
-
-
-
-
     }
-
 }
 

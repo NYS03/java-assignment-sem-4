@@ -18,13 +18,12 @@ public class Stock extends Items {
             int option = sc.nextInt();
             switch(option){
                 case 1:
-                    addItem();
                     break;
                 case 5:
                     printStockList();
                     break;
                 case 6:
-                    System.exit(0);
+                    main.mainScreen();
                     break;
                 default:
                     System.out.println("Invalid option");
@@ -102,7 +101,7 @@ public class Stock extends Items {
 
     }
 
-    public static void addItem(){
+    /*public static void addItem(){
         Scanner input = new Scanner(System.in);
         //ask user which category to add
         //ask user to enter item details
@@ -167,14 +166,14 @@ public class Stock extends Items {
                     //store everything into the globalInventory array
                     globalInventory.cpu[globalInventory.cpu.length] = new cpu(itemID, price, brand, quantity, itemType, name, core, thread, frequency);
 
-                case 8:
-                    x = 1;
-                    break;
+
+
 
 
             }
         }while(x == 0);
-    }
+     */
+
 
 
 

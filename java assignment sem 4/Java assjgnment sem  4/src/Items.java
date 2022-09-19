@@ -60,4 +60,6 @@ public class Items{
     public String toString(){
         return "\nItem ID: " + itemID + "\nPrice: RM" + price + "\nBrand: " + brand + "\nQuantity: " + quantity + "\nItem Type: " + itemType;
     }
+
+
 }
