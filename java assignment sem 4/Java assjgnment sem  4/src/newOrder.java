@@ -1,7 +1,7 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class newOrder extends Items{
-    public static void newOrder(){
+public class newOrder extends Items {
+    public static void newOrder() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Please Select what to buy: ");
@@ -28,20 +28,19 @@ public class newOrder extends Items{
                         System.out.println("Item selected: " + globalInventory.cpu[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
-                        if (quantity > globalInventory.cpu[i].getQuantity()) {
-                            System.out.println("Sorry, we don't have that much quantity");
-                        } else {
-                            for(int j = 0; j < globalInventory.cpu.length; j++){
-                                if(globalInventory.cpu[j].getItemID().equals(itemid)){
-                                    globalInventory.cpu[j].setQuantity(globalInventory.cpu[j].getQuantity() - quantity);
-                                }
-                            }
-                            cart.add(globalInventory.cpu[i], quantity);
+                        if(quantity > globalInventory.cpu[i].getQuantity()){
+                            System.out.println("Not enough stock");
+                            break;
+                        }
+                        else if(quantity <= globalInventory.cpu[i].getQuantity()){
+                            int newQuantity = globalInventory.cpu[i].getQuantity() - quantity;
+                            globalInventory.cpu[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
+                            cart.add(globalInventory.cpu[i], quantity);
+                            break;
                         }
                     }
                 }
-
                 break;
             case 2:
                 for (Items i : globalInventory.ram) {
@@ -53,15 +52,19 @@ public class newOrder extends Items{
                 String itemid2 = input.nextLine();
                 for (int i = 0; i < globalInventory.ram.length; i++) {
                     if (globalInventory.ram[i].getItemID().equals(itemid2)) {
-                        System.out.println("Item selected: " + i);
+                        System.out.println("Item selected: " + globalInventory.ram[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
-                        if (quantity > globalInventory.ram[i].getQuantity()) {
-                            System.out.println("Sorry, we don't have that much quantity");
-                        } else {
-                            globalInventory.ram[i].setQuantity(globalInventory.ram[i].getQuantity() - quantity);
-                            cart.add(globalInventory.ram[i], quantity);
+                        if(quantity > globalInventory.ram[i].getQuantity()){
+                            System.out.println("Not enough stock");
+                            break;
+                        }
+                        else if(quantity <= globalInventory.ram[i].getQuantity()){
+                            int newQuantity = globalInventory.ram[i].getQuantity() - quantity;
+                            globalInventory.ram[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
+                            cart.add(globalInventory.ram[i], quantity);
+                            break;
                         }
                     }
                 }
@@ -74,16 +77,21 @@ public class newOrder extends Items{
                 System.out.println("Please select the item by item id: ");
                 input.nextLine();
                 String itemid3 = input.nextLine();
-                for (Items i : globalInventory.gpu) {
-                    if (i.getItemID().matches(itemid3) ) {
-                        System.out.println("Item selected: " + i);
+                for (int i = 0; i < globalInventory.gpu.length; i++) {
+                    if (globalInventory.gpu[i].getItemID().equals(itemid3)) {
+                        System.out.println("Item selected: " + globalInventory.gpu[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
-                        if (quantity > i.getQuantity()) {
-                            System.out.println("Sorry, we don't have that much quantity");
-                        } else {
-                            i.setQuantity(i.getQuantity() - quantity);
+                        if(quantity > globalInventory.gpu[i].getQuantity()){
+                            System.out.println("Not enough stock");
+                            break;
+                        }
+                        else if(quantity <= globalInventory.gpu[i].getQuantity()){
+                            int newQuantity = globalInventory.gpu[i].getQuantity() - quantity;
+                            globalInventory.gpu[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
+                            cart.add(globalInventory.gpu[i], quantity);
+                            break;
                         }
                     }
                 }
@@ -96,16 +104,21 @@ public class newOrder extends Items{
                 System.out.println("Please select the item by item id: ");
                 input.nextLine();
                 String itemid4 = input.nextLine();
-                for (Items i : globalInventory.casing) {
-                    if (i.getItemID().matches(itemid4) ) {
-                        System.out.println("Item selected: " + i);
+                for (int i = 0; i < globalInventory.casing.length; i++) {
+                    if (globalInventory.casing[i].getItemID().equals(itemid4)) {
+                        System.out.println("Item selected: " + globalInventory.casing[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
-                        if (quantity > i.getQuantity()) {
-                            System.out.println("Sorry, we don't have that much quantity");
-                        } else {
-                            i.setQuantity(i.getQuantity() - quantity);
+                        if(quantity > globalInventory.casing[i].getQuantity()){
+                            System.out.println("Not enough stock");
+                            break;
+                        }
+                        else if(quantity <= globalInventory.casing[i].getQuantity()){
+                            int newQuantity = globalInventory.casing[i].getQuantity() - quantity;
+                            globalInventory.casing[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
+                            cart.add(globalInventory.casing[i], quantity);
+                            break;
                         }
                     }
                 }
@@ -118,20 +131,24 @@ public class newOrder extends Items{
                 System.out.println("Please select the item by item id: ");
                 input.nextLine();
                 String itemid5 = input.nextLine();
-                for (Items i : globalInventory.psu) {
-                    if (i.getItemID().matches(itemid5) ) {
-                        System.out.println("Item selected: " + i);
+                for (int i = 0; i < globalInventory.psu.length; i++) {
+                    if (globalInventory.psu[i].getItemID().equals(itemid5)) {
+                        System.out.println("Item selected: " + globalInventory.psu[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
-                        if (quantity > i.getQuantity()) {
-                            System.out.println("Sorry, we don't have that much quantity");
-                        } else {
-                            i.setQuantity(i.getQuantity() - quantity);
+                        if(quantity > globalInventory.psu[i].getQuantity()){
+                            System.out.println("Not enough stock");
+                            break;
+                        }
+                        else if(quantity <= globalInventory.psu[i].getQuantity()){
+                            int newQuantity = globalInventory.psu[i].getQuantity() - quantity;
+                            globalInventory.psu[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
+                            cart.add(globalInventory.psu[i], quantity);
+                            break;
                         }
                     }
                 }
-
                 break;
             case 6:
                 for (Items i : globalInventory.storage) {
@@ -141,21 +158,24 @@ public class newOrder extends Items{
                 System.out.println("Please select the item by item id: ");
                 input.nextLine();
                 String itemid6 = input.nextLine();
-                for (Items i : globalInventory.storage) {
-                    if (i.getItemID().matches(itemid6) ) {
-                        System.out.println("Item selected: " + i);
+                for (int i = 0; i < globalInventory.storage.length; i++) {
+                    if (globalInventory.storage[i].getItemID().equals(itemid6)) {
+                        System.out.println("Item selected: " + globalInventory.storage[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
-                        if (quantity > i.getQuantity()) {
-                            System.out.println("Sorry, we don't have that much quantity");
-                        } else {
-                            i.setQuantity(i.getQuantity() - quantity);
+                        if(quantity > globalInventory.storage[i].getQuantity()){
+                            System.out.println("Not enough stock");
+                            break;
+                        }
+                        else if(quantity <= globalInventory.storage[i].getQuantity()){
+                            int newQuantity = globalInventory.storage[i].getQuantity() - quantity;
+                            globalInventory.storage[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
-
+                            cart.add(globalInventory.storage[i], quantity);
+                            break;
                         }
                     }
                 }
-
                 break;
             case 7:
                 System.out.println("Thank you for shopping with us!");
@@ -164,6 +184,7 @@ public class newOrder extends Items{
                 System.out.println("Invalid option");
                 break;
         }
+
 
     }
 }

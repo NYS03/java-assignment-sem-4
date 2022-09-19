@@ -4,8 +4,9 @@ public class cart extends Items{
     public static void add(Items i, int quantity) {
         for (int j = 0; j < cart.length; j++) {
             if (cart[j] == null) {
+                //add items 1 by 1
                 cart[j] = i;
-                cart[j].setQuantity(quantity);
+                cart[j].setQuantity(i.getQuantity());
                 break;
             }
         }
@@ -20,5 +21,11 @@ public class cart extends Items{
         //print total price
         System.out.println("Total price: RM" + itemCart.totalPrice());
 
+    }
+
+    public static void clearCart() {
+        for (int i = 0; i < cart.length; i++) {
+            cart[i] = null;
+        }
     }
 }
