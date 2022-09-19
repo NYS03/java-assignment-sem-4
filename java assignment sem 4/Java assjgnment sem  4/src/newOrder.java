@@ -31,7 +31,11 @@ public class newOrder extends Items{
                         if (quantity > globalInventory.cpu[i].getQuantity()) {
                             System.out.println("Sorry, we don't have that much quantity");
                         } else {
-                            globalInventory.cpu[i].setQuantity(globalInventory.cpu[i].getQuantity() - quantity);
+                            for(int j = 0; j < globalInventory.cpu.length; j++){
+                                if(globalInventory.cpu[j].getItemID().equals(itemid)){
+                                    globalInventory.cpu[j].setQuantity(globalInventory.cpu[j].getQuantity() - quantity);
+                                }
+                            }
                             cart.add(globalInventory.cpu[i], quantity);
                             System.out.println("Item added to cart");
                         }
