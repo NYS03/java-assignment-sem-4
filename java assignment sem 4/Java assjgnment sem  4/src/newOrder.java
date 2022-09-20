@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class newOrder extends Items {
+    public static itemCart[] cart = new itemCart[100];
     public static void newOrder() {
         Scanner input = new Scanner(System.in);
 
@@ -33,10 +34,9 @@ public class newOrder extends Items {
                             break;
                         }
                         else if(quantity <= globalInventory.cpu[i].getQuantity()){
-                            int newQuantity = globalInventory.cpu[i].getQuantity() - quantity;
-                            globalInventory.cpu[i].setQuantity(newQuantity);
+                            cartMethod.add(globalInventory.cpu[i], quantity);
+                            globalInventory.cpu[i].setQuantity(globalInventory.cpu[i].getQuantity() - quantity);
                             System.out.println("Item added to cart");
-                            cart.add(globalInventory.cpu[i], quantity);
                             break;
                         }
                     }
@@ -63,7 +63,6 @@ public class newOrder extends Items {
                             int newQuantity = globalInventory.ram[i].getQuantity() - quantity;
                             globalInventory.ram[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
-                            cart.add(globalInventory.ram[i], quantity);
                             break;
                         }
                     }
@@ -90,7 +89,6 @@ public class newOrder extends Items {
                             int newQuantity = globalInventory.gpu[i].getQuantity() - quantity;
                             globalInventory.gpu[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
-                            cart.add(globalInventory.gpu[i], quantity);
                             break;
                         }
                     }
@@ -117,7 +115,6 @@ public class newOrder extends Items {
                             int newQuantity = globalInventory.casing[i].getQuantity() - quantity;
                             globalInventory.casing[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
-                            cart.add(globalInventory.casing[i], quantity);
                             break;
                         }
                     }
@@ -144,7 +141,6 @@ public class newOrder extends Items {
                             int newQuantity = globalInventory.psu[i].getQuantity() - quantity;
                             globalInventory.psu[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
-                            cart.add(globalInventory.psu[i], quantity);
                             break;
                         }
                     }
@@ -171,7 +167,6 @@ public class newOrder extends Items {
                             int newQuantity = globalInventory.storage[i].getQuantity() - quantity;
                             globalInventory.storage[i].setQuantity(newQuantity);
                             System.out.println("Item added to cart");
-                            cart.add(globalInventory.storage[i], quantity);
                             break;
                         }
                     }

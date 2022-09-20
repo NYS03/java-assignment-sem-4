@@ -11,7 +11,11 @@ public class itemCart extends Items{
 
     public itemCart(String itemID, double price, String brand, int quantity, String itemType){
         super(itemID, price, brand, quantity, itemType);
+
     }
+
+
+
 
     public String getItemID(){
         return itemID;
@@ -53,12 +57,14 @@ public class itemCart extends Items{
         this.itemType = itemType;
     }
 
+
+
     //method to add all items in cart to totalprice
     public static double totalPrice(){
         double total = 0;
-        for (int i = 0; i < cart.cart.length; i++) {
-            if (cart.cart[i] != null) {
-                total += cart.cart[i].getPrice() * cart.cart[i].getQuantity();
+        for (int i = 0; i < newOrder.cart.length; i++) {
+            if (newOrder.cart[i] != null) {
+                total += newOrder.cart[i].getPrice() * newOrder.cart[i].getQuantity();
             }
         }
         return total;

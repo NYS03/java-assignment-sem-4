@@ -49,7 +49,6 @@ public class cpu extends Items{
         this.ClockSpeed = ClockSpeed;
     }
 
-
     public String toString(){
         return super.toString() +
                         "\nCPU Name: " + cpuName +

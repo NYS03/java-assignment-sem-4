@@ -26,7 +26,6 @@ public class paymentDriver {
                                 System.out.print("CVV: ");
                                 String cvv = input.next();
                                 System.out.println("Payment successful");
-                                cart.clearCart();
                                 break;
 
 

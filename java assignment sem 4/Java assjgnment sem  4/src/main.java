@@ -6,10 +6,6 @@ public class main {
     public static void main(String[] args) {
         mainLogin.login();
         mainScreen();
-
-
-
-
     }
 
     public static void mainScreen(){
@@ -29,11 +25,13 @@ public class main {
                     Stock.Stock();
                     break;
                 case 3:
-                    cart.checkCart();
+                    cartMethod.checkCart();
                     break;
                 case 4:
                     System.out.println("Thank you for shopping with us!");
+                    System.exit(0);
                     break;
+                    //exit program
                 default:
                     System.out.println("Invalid option");
                     break;

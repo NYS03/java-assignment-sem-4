@@ -3,6 +3,7 @@ public class Items{
     private double price;
     private String brand;
     private int quantity;
+    private int purchaseQuantity;
     private String itemType;
 
     public Items(){
@@ -55,6 +56,14 @@ public class Items{
 
     public void setItemType(String itemType){
         this.itemType = itemType;
+    }
+
+    public void setPurchaseQuantity(int purchaseQuantity){
+        this.purchaseQuantity = purchaseQuantity;
+    }
+
+    public int getPurchaseQuantity(){
+        return purchaseQuantity;
     }
 
     public String toString(){
