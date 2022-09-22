@@ -1,5 +1,4 @@
 public class gpu extends Items{
-    private String gpuName;
     private String gpuType; //GDDR5, GDDR6, GDDR6X
     private String gpuMemory;
     private int gpuBidwidth;
@@ -8,20 +7,11 @@ public class gpu extends Items{
 
     }
 
-    public gpu(String itemID, double price, String brand, int quantity, String itemType, String gpuName, String gpuType, String gpuMemory, int gpuBidwidth){
-        super(itemID, price, brand, quantity, itemType);
-        this.gpuName = gpuName;
+    public gpu(String itemID, double price, String brand, int quantity, String itemType, String name, String gpuType, String gpuMemory, int gpuBidwidth){
+        super(itemID, price, brand, quantity, itemType, name);
         this.gpuType = gpuType;
         this.gpuMemory = gpuMemory;
         this.gpuBidwidth = gpuBidwidth;
-    }
-
-    public String getGpuName(){
-        return gpuName;
-    }
-
-    public void setGpuName(String gpuName){
-        this.gpuName = gpuName;
     }
 
     public String getGpuType(){
@@ -51,7 +41,6 @@ public class gpu extends Items{
 
     public String toString(){
         return super.toString() +
-                        "\nGPU Name: " + gpuName +
                         "\nGPU Type: " + gpuType +
                         "\nGPU BidWidth: " + gpuBidwidth + "bit" +
                         "\nGPU Memory: " + gpuMemory +

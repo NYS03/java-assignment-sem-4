@@ -1,5 +1,4 @@
 public class motherboard extends Items{
-    private String motherBoardName;
     private String motherBoardType; //lga or am
     private String motherBoardSize; //atx, e-atx etc
     private String motherBoardRamType; //ddr3, ddr4 etc
@@ -10,24 +9,14 @@ public class motherboard extends Items{
 
     }
 
-    public motherboard(String itemID, double price, String brand, int quantity, String itemType, String motherBoardName, String motherBoardType, String motherBoardSize, String motherBoardRamType, int motherBoardRamSize, String motherBoardRamSpeed){
-        super(itemID, price, brand, quantity, itemType);
-        this.motherBoardName = motherBoardName;
+    public motherboard(String itemID, double price, String brand, String name, int quantity, String itemType, String motherBoardType, String motherBoardSize, String motherBoardRamType, int motherBoardRamSize, String motherBoardRamSpeed){
+        super(itemID, price, brand, quantity, itemType, name);
         this.motherBoardType = motherBoardType;
         this.motherBoardSize = motherBoardSize;
         this.motherBoardRamType = motherBoardRamType;
         this.motherBoardRamSize = motherBoardRamSize;
         this.motherBoardRamSpeed = motherBoardRamSpeed;
     }
-
-    public String getMotherBoardName(){
-        return motherBoardName;
-    }
-
-    public void setMotherBoardName(String motherBoardName){
-        this.motherBoardName = motherBoardName;
-    }
-
     public String getMotherBoardType(){
         return motherBoardType;
     }
@@ -70,7 +59,6 @@ public class motherboard extends Items{
 
     public String toString(){
         return super.toString() +
-                        "\nMotherboard Name: " + motherBoardName +
                         "\nMotherboard Type: " + motherBoardType +
                         "\nMotherboard Size: " + motherBoardSize +
                         "\nMotherboard RAM Type: " + motherBoardRamType +

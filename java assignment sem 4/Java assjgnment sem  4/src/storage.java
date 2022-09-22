@@ -1,5 +1,4 @@
 public class storage extends Items{
-    private String StorageName;
     private String StorageType; //SSD, HDD
     private String StorageSize;
 
@@ -7,21 +6,11 @@ public class storage extends Items{
 
     }
 
-    public storage(String itemID, double price, String brand, int quantity, String itemType, String StorageName, String StorageType, String StorageSize){
-        super(itemID, price, brand, quantity, itemType);
-        this.StorageName = StorageName;
+    public storage(String itemID, double price, String brand, String name, int quantity, String itemType, String StorageType, String StorageSize){
+        super(itemID, price, brand, quantity, itemType, name);
         this.StorageType = StorageType;
         this.StorageSize = StorageSize;
     }
-
-    public String getStorageName(){
-        return StorageName;
-    }
-
-    public void setStorageName(String StorageName){
-        this.StorageName = StorageName;
-    }
-
     public String getStorageType(){
         return StorageType;
     }
@@ -40,7 +29,6 @@ public class storage extends Items{
 
     public String toString(){
         return super.toString() +
-                        "\nStorage Name: " + StorageName +
                         "\nStorage Type: " + StorageType +
                         "\nStorage Size: " + StorageSize +
                         "\n";

@@ -5,17 +5,19 @@ public class Items{
     private int quantity;
     private int purchaseQuantity;
     private String itemType;
+    private String name;
 
     public Items(){
 
     }
 
-    public Items(String itemID, double price, String brand, int quantity, String itemType){
+    public Items(String itemID, double price, String brand, int quantity, String itemType, String name){
         this.itemID = itemID;
         this.price = price;
         this.brand = brand;
         this.quantity = quantity;
         this.itemType = itemType;
+        this.name = name;
     }
 
     public String getItemID(){
@@ -58,16 +60,17 @@ public class Items{
         this.itemType = itemType;
     }
 
-    public void setPurchaseQuantity(int purchaseQuantity){
-        this.purchaseQuantity = purchaseQuantity;
+    public String getName(){
+        return name;
     }
 
-    public int getPurchaseQuantity(){
-        return purchaseQuantity;
+    public void setName(String name){
+        this.name = name;
     }
+
 
     public String toString(){
-        return "\nItem ID: " + itemID + "\nPrice: RM" + price + "\nBrand: " + brand + "\nQuantity: " + quantity + "\nItem Type: " + itemType;
+        return "\nItem ID: " + itemID + "\nPrice: RM" + price + "\nBrand: " + brand + "\nItem Name: " + name + "\nQuantity: " + quantity + "\nItem Type: " + itemType;
     }
 
 

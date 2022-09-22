@@ -60,8 +60,8 @@ public class newOrder extends Items {
                             break;
                         }
                         else if(quantity <= globalInventory.ram[i].getQuantity()){
-                            int newQuantity = globalInventory.ram[i].getQuantity() - quantity;
-                            globalInventory.ram[i].setQuantity(newQuantity);
+                            cartMethod.add(globalInventory.ram[i], quantity);
+                            globalInventory.ram[i].setQuantity(globalInventory.ram[i].getQuantity() - quantity);
                             System.out.println("Item added to cart");
                             break;
                         }
@@ -86,8 +86,8 @@ public class newOrder extends Items {
                             break;
                         }
                         else if(quantity <= globalInventory.gpu[i].getQuantity()){
-                            int newQuantity = globalInventory.gpu[i].getQuantity() - quantity;
-                            globalInventory.gpu[i].setQuantity(newQuantity);
+                            cartMethod.add(globalInventory.gpu[i], quantity);
+                            globalInventory.gpu[i].setQuantity(globalInventory.gpu[i].getQuantity() - quantity);
                             System.out.println("Item added to cart");
                             break;
                         }
@@ -112,8 +112,8 @@ public class newOrder extends Items {
                             break;
                         }
                         else if(quantity <= globalInventory.casing[i].getQuantity()){
-                            int newQuantity = globalInventory.casing[i].getQuantity() - quantity;
-                            globalInventory.casing[i].setQuantity(newQuantity);
+                            cartMethod.add(globalInventory.casing[i], quantity);
+                            globalInventory.casing[i].setQuantity(globalInventory.casing[i].getQuantity() - quantity);
                             System.out.println("Item added to cart");
                             break;
                         }
@@ -138,8 +138,8 @@ public class newOrder extends Items {
                             break;
                         }
                         else if(quantity <= globalInventory.psu[i].getQuantity()){
-                            int newQuantity = globalInventory.psu[i].getQuantity() - quantity;
-                            globalInventory.psu[i].setQuantity(newQuantity);
+                            cartMethod.add(globalInventory.psu[i], quantity);
+                            globalInventory.psu[i].setQuantity(globalInventory.psu[i].getQuantity() - quantity);
                             System.out.println("Item added to cart");
                             break;
                         }
@@ -164,8 +164,8 @@ public class newOrder extends Items {
                             break;
                         }
                         else if(quantity <= globalInventory.storage[i].getQuantity()){
-                            int newQuantity = globalInventory.storage[i].getQuantity() - quantity;
-                            globalInventory.storage[i].setQuantity(newQuantity);
+                            cartMethod.add(globalInventory.storage[i], quantity);
+                            globalInventory.storage[i].setQuantity(globalInventory.storage[i].getQuantity() - quantity);
                             System.out.println("Item added to cart");
                             break;
                         }

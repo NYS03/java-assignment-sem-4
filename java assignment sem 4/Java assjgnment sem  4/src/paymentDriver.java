@@ -18,7 +18,7 @@ public class paymentDriver {
                 if (cardNumber.length() == 16) {
                     CardPayment.isValidCardNumber(cardNumber);
                     if (CardPayment.isValidCardNumber(cardNumber) == true) {
-                        System.out.print("Expiry Date: ");
+                        System.out.print("Expiry Date(DD/MM/YY): ");
                         String expiryDate = input.next();
                         if (expiryDate.length() == 5) {
                             CardPayment.isExpired(expiryDate);

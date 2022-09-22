@@ -14,7 +14,8 @@ public class main {
             System.out.println("1. New Order");
             System.out.println("2. Inventory");
             System.out.println("3. Check Cart");
-            System.out.println("4. Exit");
+            System.out.println("4. Payment");
+            System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
             switch (choice) {
@@ -28,6 +29,9 @@ public class main {
                     cartMethod.checkCart();
                     break;
                 case 4:
+                    paymentDriver.paymentDriver();
+                    break;
+                case 5:
                     System.out.println("Thank you for shopping with us!");
                     System.exit(0);
                     break;
