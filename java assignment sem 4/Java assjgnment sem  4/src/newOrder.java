@@ -25,7 +25,7 @@ public class newOrder extends Items {
                 input.nextLine();
                 String itemid = input.nextLine();
                 for (int i = 0; i < globalInventory.cpu.length; i++) {
-                    if (globalInventory.cpu[i].getItemID().equals(itemid)) {
+                    if (globalInventory.cpu[i].getItemID().equalsIgnoreCase(itemid)) {
                         System.out.println("Item selected: " + globalInventory.cpu[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
@@ -39,8 +39,12 @@ public class newOrder extends Items {
                             System.out.println("Item added to cart");
                             break;
                         }
+                    } else if (!globalInventory.cpu[i].getItemID().equalsIgnoreCase(itemid)) {
+                        System.out.println("Invalid Item");
+                        break;
                     }
                 }
+
                 break;
             case 2:
                 for (Items i : globalInventory.ram) {
@@ -51,7 +55,7 @@ public class newOrder extends Items {
                 input.nextLine();
                 String itemid2 = input.nextLine();
                 for (int i = 0; i < globalInventory.ram.length; i++) {
-                    if (globalInventory.ram[i].getItemID().equals(itemid2)) {
+                    if (globalInventory.ram[i].getItemID().equalsIgnoreCase(itemid2)) {
                         System.out.println("Item selected: " + globalInventory.ram[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
@@ -65,6 +69,9 @@ public class newOrder extends Items {
                             System.out.println("Item added to cart");
                             break;
                         }
+                    }else if (!globalInventory.cpu[i].getItemID().equalsIgnoreCase(itemid2)) {
+                        System.out.println("Invalid Item");
+                        break;
                     }
                 }
                 break;
@@ -77,7 +84,7 @@ public class newOrder extends Items {
                 input.nextLine();
                 String itemid3 = input.nextLine();
                 for (int i = 0; i < globalInventory.gpu.length; i++) {
-                    if (globalInventory.gpu[i].getItemID().equals(itemid3)) {
+                    if (globalInventory.gpu[i].getItemID().equalsIgnoreCase(itemid3)) {
                         System.out.println("Item selected: " + globalInventory.gpu[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
@@ -91,6 +98,9 @@ public class newOrder extends Items {
                             System.out.println("Item added to cart");
                             break;
                         }
+                    }else if (!globalInventory.cpu[i].getItemID().equalsIgnoreCase(itemid3)) {
+                        System.out.println("Invalid Item");
+                        break;
                     }
                 }
                 break;
@@ -103,7 +113,7 @@ public class newOrder extends Items {
                 input.nextLine();
                 String itemid4 = input.nextLine();
                 for (int i = 0; i < globalInventory.casing.length; i++) {
-                    if (globalInventory.casing[i].getItemID().equals(itemid4)) {
+                    if (globalInventory.casing[i].getItemID().equalsIgnoreCase(itemid4)) {
                         System.out.println("Item selected: " + globalInventory.casing[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
@@ -117,6 +127,9 @@ public class newOrder extends Items {
                             System.out.println("Item added to cart");
                             break;
                         }
+                    }else if (!globalInventory.cpu[i].getItemID().equalsIgnoreCase(itemid4)) {
+                        System.out.println("Invalid Item");
+                        break;
                     }
                 }
                 break;
@@ -129,7 +142,7 @@ public class newOrder extends Items {
                 input.nextLine();
                 String itemid5 = input.nextLine();
                 for (int i = 0; i < globalInventory.psu.length; i++) {
-                    if (globalInventory.psu[i].getItemID().equals(itemid5)) {
+                    if (globalInventory.psu[i].getItemID().equalsIgnoreCase(itemid5)) {
                         System.out.println("Item selected: " + globalInventory.psu[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
@@ -143,6 +156,9 @@ public class newOrder extends Items {
                             System.out.println("Item added to cart");
                             break;
                         }
+                    }else if (!globalInventory.cpu[i].getItemID().equalsIgnoreCase(itemid5)) {
+                        System.out.println("Invalid Item");
+                        break;
                     }
                 }
                 break;
@@ -155,7 +171,7 @@ public class newOrder extends Items {
                 input.nextLine();
                 String itemid6 = input.nextLine();
                 for (int i = 0; i < globalInventory.storage.length; i++) {
-                    if (globalInventory.storage[i].getItemID().equals(itemid6)) {
+                    if (globalInventory.storage[i].getItemID().equalsIgnoreCase(itemid6)) {
                         System.out.println("Item selected: " + globalInventory.storage[i].toString());
                         System.out.println("Please enter the quantity: ");
                         int quantity = input.nextInt();
@@ -169,6 +185,9 @@ public class newOrder extends Items {
                             System.out.println("Item added to cart");
                             break;
                         }
+                    }else if (!globalInventory.cpu[i].getItemID().equalsIgnoreCase(itemid6)) {
+                        System.out.println("Invalid Item");
+                        break;
                     }
                 }
                 break;

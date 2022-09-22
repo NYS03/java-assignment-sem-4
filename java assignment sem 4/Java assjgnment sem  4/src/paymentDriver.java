@@ -48,7 +48,18 @@ public class paymentDriver {
                 else if(cardNumber.length() != 16){
                     System.out.println("Invalid card number");
                     break;
+             
                 }
+            case 2:
+                System.out.println("Amount:");
+                int payAmount = input.nextInt();
+                if ( payAmount > cartMethod.grandTotal){
+                    double change = payAmount-cartMethod.grandTotal;
+                    System.out.println("Changes: RM" + change);
+                    System.out.println("Payment successful");
+                    break;
+                }else
+                    System.out.println("Invalid....Not enough money!!");
             }
     }
 }

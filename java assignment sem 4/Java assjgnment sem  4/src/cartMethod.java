@@ -1,5 +1,5 @@
 public class cartMethod extends Items{
-
+    public static double grandTotal = 0;
     public static void add(Items i, int quantity) {
         for (int j = 0; j < newOrder.cart.length; j++) {
             if (newOrder.cart[j] == null) {
@@ -12,7 +12,7 @@ public class cartMethod extends Items{
 
 
     public static void checkCart() {
-        double grandTotal = 0;
+
         for (int i = 0; i < newOrder.cart.length; i++) {
             if (newOrder.cart[i] != null) {
                 double total = 0;
