@@ -11,8 +11,8 @@ public class CardPayment extends Payment{
 
     }
 
-    public CardPayment(double amountPaid, double balance, double totalCharges, String cardType, String cardNumber, String cardHolderName, String expiryDate){
-        super(amountPaid, balance, totalCharges);
+    public CardPayment(double amountPaid, double balance, double totalCharges, String cardType, String cardNumber, String cardHolderName, String expiryDate, double amountReceived){
+        super(amountPaid, balance, totalCharges, amountReceived);
         this.cardType = cardType;
         this.cardNumber = cardNumber;
         this.cardHolderName = cardHolderName;
@@ -74,20 +74,24 @@ public class CardPayment extends Payment{
 
     //method to check if credit card is expired
     public static boolean isExpired(String expiryDate){
-        String[] date = expiryDate.split("/");
-        int month = Integer.parseInt(date[0]);
-        int year = Integer.parseInt(date[1]);
+        int month = Integer.parseInt(expiryDate.substring(0, 2));
+        int year = Integer.parseInt(expiryDate.substring(3, 5));
         int currentMonth = Calendar.getInstance().get(Calendar.MONTH) + 1;
-        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-        if (year < currentYear){
-            return true;
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR) - 2000;
+        if (year > currentYear){
+            return false;
         }
         else if (year == currentYear){
-            if (month < currentMonth){
+            if (month >= currentMonth){
+                return false;
+            }
+            else{
                 return true;
             }
         }
-        return false;
+        else{
+            return true;
+        }
     }
 
     //method to check if credit card is valid
@@ -99,10 +103,10 @@ public class CardPayment extends Payment{
     }
 
     //function that change first 10 numbers of credit card to *
-    public String hideCardNumber(String cardNumber){
+    public static String hideCardNumber(String cardNumber){
         String hiddenCardNumber = "";
         for (int i = 0; i < cardNumber.length(); i++) {
-            if (i < 10){
+            if (i < 12){
                 hiddenCardNumber += "*";
             }
             else{
@@ -118,7 +122,7 @@ public class CardPayment extends Payment{
     }
 
     @Override
-    public void makePayment() {
-
+    public double makePayment() {
+        return amountPaid;
     }
 }

@@ -1,42 +1,53 @@
 abstract class Payment {
-    protected static double amountPaid;
-    protected static double balance;
-    protected static double totalCharges;
+    protected  double amountPaid;
+    protected  double balance;
+    protected  double totalCharges;
+
+    protected double amountReceived;
 
     //constructors
     public Payment(){
 
     }
 
-    public Payment(double amountPaid, double balance, double totalCharges){
-        Payment.amountPaid = amountPaid;
-        Payment.balance = balance;
-        Payment.totalCharges = totalCharges;
+    public Payment(double amountPaid, double balance, double totalCharges, double amountReceived){
+        this.amountPaid = amountPaid;
+        this.balance = balance;
+        this.totalCharges = totalCharges;
+        this.amountReceived = amountReceived;
     }
 
     //getters and setters
-    public static double getAmountPaid() {
+    public  double getAmountPaid() {
         return amountPaid;
     }
 
-    public static void setAmountPaid(double amountPaid) {
-        Payment.amountPaid = amountPaid;
+    public void setAmountPaid(double amountPaid) {
+        this.amountPaid = amountPaid;
     }
 
-    public static double getBalance() {
+    public  double getBalance() {
         return balance;
     }
 
-    public static void setBalance(double balance) {
-        Payment.balance = balance;
+    public  void setBalance(double balance) {
+        this.balance = balance;
     }
 
-    public static double getTotalCharges() {
+    public  double getTotalCharges() {
         return totalCharges;
     }
 
-    public static void setTotalCharges(double totalCharges) {
-        Payment.totalCharges = totalCharges;
+    public void setTotalCharges(double totalCharges) {
+        this.totalCharges = totalCharges;
+    }
+
+    public double getAmountReceived() {
+        return amountReceived;
+    }
+
+    public void setAmountReceived(double amountReceived) {
+        this.amountReceived = amountReceived;
     }
 
     //toString
@@ -46,5 +57,5 @@ abstract class Payment {
     }
 
     //abstract methods
-    public abstract void makePayment();
+    public abstract double makePayment();
 }

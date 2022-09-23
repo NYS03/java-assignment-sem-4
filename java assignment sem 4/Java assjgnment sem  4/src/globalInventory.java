@@ -1,4 +1,4 @@
-public class globalInventory extends Items{
+public class globalInventory{
     public static Items[] cpu = {new cpu("C1000", 1480, "Intel", 1, "Intel i7 9700k","cpu" , 8 , 8, "3.6Ghz/4.9GHz"),
             new cpu("C1001", 1000, "Intel", 1, "Intel i5 9600k", "cpu", 6 , 6, "3.7GHz/4.6GHz"),
             new cpu("C1002", 600, "AMD", 1, "AMD Ryzen 5 3600", "cpu", 6 , 12, "3.6GHz/4.2GHz"),

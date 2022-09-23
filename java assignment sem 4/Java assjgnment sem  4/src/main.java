@@ -4,7 +4,6 @@ public class main {
 
 
     public static void main(String[] args) {
-        mainLogin.login();
         mainScreen();
     }
 
@@ -15,7 +14,8 @@ public class main {
             System.out.println("2. Inventory");
             System.out.println("3. Check Cart");
             System.out.println("4. Payment");
-            System.out.println("5. Exit");
+            System.out.println("5. Print Receipt");
+            System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
             switch (choice) {
@@ -32,6 +32,9 @@ public class main {
                     paymentDriver.paymentDriver();
                     break;
                 case 5:
+                    ReceiptDriver.receiptDriver();
+                    break;
+                case 6:
                     System.out.println("Thank you for shopping with us!");
                     System.exit(0);
                     break;

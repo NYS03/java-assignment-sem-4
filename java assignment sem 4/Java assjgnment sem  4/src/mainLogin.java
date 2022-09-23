@@ -21,16 +21,12 @@ public class mainLogin {
                 } else if (!uname.isEmpty()) {
                     count = 0;
 
-                } else if (uname.equals("bypass")) {
-                    count = 0;
                 }
 
 
 
             }while(count != 0);
-            if(uname.equals("bypass")){
-                break;
-            }
+
             do {
                 System.out.println("Enter the Password");
                 upass = sc.nextLine();
@@ -47,14 +43,19 @@ public class mainLogin {
 
             if (uname.equals(username.getRealname()) && upass.equals(password.getRealpass())) { //realname and realpass are from database to link
                 System.out.println("Welcome " + uname + " you have Logged-in Successfully");
+                count1 = 0;
             }
             else {
                 System.out.println("Username or password Mismatch");
-                count++;
+                count1++;
             }
-        } while (count1 == 1);
+        } while (count1 != 0);
 
 
         System.out.println("Welcome user " + username.getRealname());
+        //get time and date
+        Date date = new Date();
+        System.out.println("Date: " + date.toString());
+
     }
 }

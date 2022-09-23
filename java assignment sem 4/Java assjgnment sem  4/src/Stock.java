@@ -7,26 +7,19 @@ public class Stock extends Items {
         do {
             System.out.println("StockList Main Menu");
             System.out.println("*******************");
-            System.out.println("1. Add an Item");
-            System.out.println("2. Delete an Item");
-            System.out.println("3. Update Item Price");
-            System.out.println("4. Print Stock List");
-            System.out.println("5. Exit");
+            System.out.println("1. Update Item Price");
+            System.out.println("2. Print Stock List");
+            System.out.println("3. Exit");
             System.out.print("Select an option: ");
             Scanner sc = new Scanner(System.in);
             int option = sc.nextInt();
             switch (option) {
                 case 1:
-                    break;
-                case 3:
                     updateStock();
-                    break;
-                case 4:
+                case 2:
                     printStockList();
-                    break;
-                case 5:
+                case 3:
                     main.mainScreen();
-                    break;
                 default:
                     System.out.println("Invalid option");
                     break;
@@ -317,11 +310,10 @@ public class Stock extends Items {
                     break;
 
                 case 8:
-                    x = 1;
-                    break;
+                    Stock();
             }
 
 
-        } while (x == 0);
+        } while (true);
     }
 }

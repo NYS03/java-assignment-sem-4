@@ -2,9 +2,9 @@ public class itemCart{
     private String itemID;
     private double price;
     private String brand;
-    private int quantity;
+    private  int quantity;
     private String itemType;
-    private String name;
+    private  String name;
 
     public itemCart(){
         super();
@@ -46,7 +46,7 @@ public class itemCart{
         this.brand = brand;
     }
 
-    public int getQuantity(){
+    public  int getQuantity(){
         return quantity;
     }
 
@@ -85,7 +85,7 @@ public class itemCart{
     }
 
     public String toString(){
-        return "Item ID: " + itemID + "\nPrice: RM" + price + "\nBrand: " + brand + "\nItem Name:  " + name + "\nQuantity: " + quantity + "\nItem Type: " + itemType;
+        return "\nItem ID: " + itemID + "\nPrice: RM" + price + "\nBrand: " + brand + "\nItem Name:  " + name + "\nQuantity: " + quantity + "\nItem Type: " + itemType;
     }
 
 }

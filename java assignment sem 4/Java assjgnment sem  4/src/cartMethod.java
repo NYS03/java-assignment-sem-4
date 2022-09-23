@@ -15,20 +15,30 @@ public class cartMethod extends Items{
 
         for (int i = 0; i < newOrder.cart.length; i++) {
             if (newOrder.cart[i] != null) {
+                //check if cart is empty
                 double total = 0;
                 System.out.println(newOrder.cart[i].toString());
                 total += itemCart.totalPrice();
                 grandTotal = total;
-            }
-        }
-        System.out.println("Total price: RM" + grandTotal);
-        //print total price
 
+            }
+
+
+
+            //print total price
+        }
+        if(newOrder.cart[0] != null){
+            System.out.println("Total price: RM" + grandTotal);
+        }
+        else {
+            System.out.println("Cart is empty");
+        }
     }
 
     public static void clearCart() {
         for (int i = 0; i < newOrder.cart.length; i++) {
             newOrder.cart[i] = null;
+            grandTotal = 0;
         }
     }
 }

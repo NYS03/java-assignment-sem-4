@@ -1,44 +1,28 @@
+import java.util.Calendar;
+
 public class cashPayment extends Payment{
-    private double amount;
-    private double change;
 
     public cashPayment(){
         super();
     }
 
-    public cashPayment(double amountPaid, double balance, double totalCharges, double amount, double change){
-        super(amountPaid, balance, totalCharges);
-        this.amount = amount;
-        this.change = change;
+    public cashPayment(double amountPaid, double balance, double totalCharges, double amountReceived){
+        super(amountPaid, balance, totalCharges, amountReceived);
     }
 
-    public double getAmount(){
-        return amount;
-    }
 
-    public double getChange(){
-        return change;
-    }
+    public static double calculateChange(double amountReceived, double total){
 
-    public void setAmount(double amount){
-        this.amount = amount;
-    }
-
-    public void setChange(double change){
-        this.change = change;
-    }
-
-    public double calculateChange(double amount, double total){
-        return amount - total;
+        return amountReceived - total;
     }
 
     public String toString(){
-        return super.toString() + "\nAmount: " + amount + "\nChange: " + change;
+        return super.toString() + "\nAmount: " + totalCharges + "\nChange: " + calculateChange(amountReceived, totalCharges);
     }
 
     @Override
-    public void makePayment() {
-
+    public double makePayment() {
+        return calculateChange(amountReceived, totalCharges);
     }
 
 
